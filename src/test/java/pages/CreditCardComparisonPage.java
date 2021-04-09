@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This is a Credit Cards Comparison page class which helps to get Actual data on this page for selected cards.
+ */
 
 public class CreditCardComparisonPage {
     WebDriver driver;
@@ -23,6 +26,9 @@ public class CreditCardComparisonPage {
         PageFactory.initElements(driver, this);
     }
 
+    /**
+     * This function helps to get Actual data of credit cards which needs to be compared.
+     */
     public List<Map<String, String>> getActualResult(int noOfCards) {
         List<Map<String, String>> actualResult = new ArrayList<>();
         for (int num = 0; num < noOfCards; num++) {
@@ -37,7 +43,9 @@ public class CreditCardComparisonPage {
 
     }
 
-
+    /**
+     * This functions helps to get names of the credit cards which are being compared
+     */
     public List<String> getComparisonCardNames(int noOfCards) {
         List<String> cardNames = new ArrayList<>();
         for (int num = 0; num < noOfCards; num++) {

@@ -10,6 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+/**
+ * This is a CardsPage class where we are navigating to credit cards
+ */
+
 public class CardsPage {
     WebDriver driver;
     WebDriverWait wait;
@@ -32,9 +36,16 @@ public class CardsPage {
         pagesUtil = new PagesUtil(driver);
     }
 
+    /**
+     * Navigate to credit cards page to see credit cards list
+     */
     public void navigateToCreditCards(){
         pagesUtil.navigateToCreditCardMenu("Credit Cards");
     }
+
+    /**
+     * This will select no of credit credits to compare
+     */
 
     public void selectCardsToCompare(int noOfCards){
         for(WebElement card : creditCardsList.subList(0, noOfCards)) {
@@ -43,6 +54,9 @@ public class CardsPage {
         }
     }
 
+    /**
+     * Click on compare button
+     */
     public void clickToCompare(){
         compareButton.click();
     }
